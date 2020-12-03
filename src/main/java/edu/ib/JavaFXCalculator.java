@@ -20,11 +20,11 @@ public class JavaFXCalculator extends Application {
     public void start(Stage stage) throws IOException {
 
         Parent root = FXMLLoader.load((getClass().getResource("/fxml/calculator.fxml")));
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        Scene scene = new Scene(new StackPane(l), 640, 480);
+
+        Scene scene = new Scene(root, 400, 500);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
+
     }
 }
