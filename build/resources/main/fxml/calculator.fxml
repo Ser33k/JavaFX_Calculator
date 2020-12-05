@@ -13,7 +13,7 @@
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="display" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="100.0" prefWidth="618.0" styleClass="display">
+            <TextField fx:id="display" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="100.0" prefWidth="618.0" styleClass="display">
                <font>
                   <Font size="40.0" />
                </font>

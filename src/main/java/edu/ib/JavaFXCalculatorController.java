@@ -6,7 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class JavaFXCalculatorController {
-
+    //*****************************************
+// za kazda operacja trzeba nacisnac rowna sie
+    // ****************************************
 
     private double score;
     private double data;
