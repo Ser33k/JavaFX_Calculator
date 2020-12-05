@@ -1,0 +1,51 @@
+.root {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Courier New";
+
+    /*-fx-base: rgb(132,145,47);*/
+    /*-fx-background: rgb(225,228,203);*/
+
+
+
+}
+
+button {
+    background-color: #999;
+}
+
+button:hover {
+    -fx-background-color: #444;
+}
+
+.btn1 {
+    -fx-background-color: #e9c106;
+}
+
+.btn1:hover, .btn1:focused {
+    -fx-background-color: #eee;
+    -fx-text-fill: #e9c106;
+
+}
+
+.btn2 {
+    -fx-background-color: #ccc;
+}
+
+.btn2:hover {
+    -fx-background-color: #eee;
+
+}
+
+.btn3 {
+    -fx-background-color: #888;
+}
+
+.btn3:hover {
+    -fx-background-color: #aaa;
+
+}
+
+.display {
+    -fx-background-color: #000;
+    -fx-text-fill: #fff;
+    }
