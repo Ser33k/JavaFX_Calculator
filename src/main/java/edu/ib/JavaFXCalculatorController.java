@@ -2,8 +2,13 @@ package edu.ib;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class JavaFXCalculatorController {
     //*****************************************
@@ -18,73 +23,10 @@ public class JavaFXCalculatorController {
     private TextField display;
 
     @FXML
-    private Button CBtn;
-
-    @FXML
-    private Button plusMinusBtn;
-
-    @FXML
-    private Button percentBtn;
-
-    @FXML
-    private Button divisionBtn;
-
-    @FXML
-    private Button sevenBtn;
-
-    @FXML
-    private Button eightBtn;
-
-    @FXML
-    private Button nineBtn;
-
-    @FXML
-    private Button multiplyBtn;
-
-    @FXML
-    private Button fourBtn;
-
-    @FXML
-    private Button fiveBtn;
-
-    @FXML
-    private Button sixBtn;
-
-    @FXML
-    private Button minusBtn;
-
-    @FXML
-    private Button oneBtn;
-
-    @FXML
-    private Button twoBtn;
-
-    @FXML
-    private Button threeBtn;
-
-    @FXML
-    private Button plusBtn;
-
-    @FXML
-    private Button zeroBtn;
-
-    @FXML
-    private Button dotBtn;
-
-    @FXML
-    private Button equalBtn;
-
-    @FXML
     void clear(ActionEvent event) {
         display.setText("");
     }
 
-
-
-    @FXML
-    void dot(ActionEvent event) {
-        display.appendText(".");
-    }
 
     @FXML
     void eight(ActionEvent event) {
@@ -144,10 +86,14 @@ public class JavaFXCalculatorController {
             score = data * secondData;
         }
         if (operation==4){
-            score = data / secondData;
+                score = data / secondData;
         }
 
-        display.setText(String.valueOf(score));
+        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+        DecimalFormat df = (DecimalFormat)nf;
+        df.applyPattern("0.############");
+
+        display.setText(df.format(score));
         score = 0;
     }
     @FXML
@@ -169,7 +115,10 @@ public class JavaFXCalculatorController {
 
     }
 
-
+    @FXML
+    void dot(ActionEvent event) {
+        display.appendText(".");
+    }
 
     @FXML
     void plusMinus(ActionEvent event) {
