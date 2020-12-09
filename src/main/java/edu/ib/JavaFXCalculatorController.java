@@ -43,6 +43,64 @@ public class JavaFXCalculatorController {
     void four(ActionEvent event) {
         display.appendText("4");   }
 
+
+    @FXML
+    void nine(ActionEvent event) {
+        display.appendText("9");
+
+    }
+
+    @FXML
+    void one(ActionEvent event) {
+        display.appendText("1");    }
+
+
+
+    @FXML
+    void seven(ActionEvent event) {
+        display.appendText("7");  }
+
+    @FXML
+    void six(ActionEvent event) {
+        display.appendText("6");   }
+
+    @FXML
+    void three(ActionEvent event) {
+        display.appendText("3");    }
+
+    @FXML
+    void two(ActionEvent event) {
+        display.appendText("2");  }
+
+    @FXML
+    void zero(ActionEvent event) {
+
+        display.appendText("0");
+    }
+
+    @FXML
+    void percent(ActionEvent event) {
+        double x = Double.parseDouble(display.getText());
+        x /= 100;
+
+        display.setText(String.valueOf(x));
+
+    }
+
+    @FXML
+    void dot(ActionEvent event) {
+        display.appendText(".");
+    }
+
+    @FXML
+    void plusMinus(ActionEvent event) {
+        if (display.getText().charAt(0) == '-')
+            display.deleteText(0,1);
+        else
+            display.insertText(0,"-");
+
+    }
+
     @FXML
     void plus(ActionEvent event) {
         data = Double.parseDouble(display.getText());
@@ -86,7 +144,7 @@ public class JavaFXCalculatorController {
             score = data * secondData;
         }
         if (operation==4){
-                score = data / secondData;
+            score = data / secondData;
         }
 
         NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
@@ -95,60 +153,6 @@ public class JavaFXCalculatorController {
 
         display.setText(df.format(score));
         score = 0;
-    }
-    @FXML
-    void nine(ActionEvent event) {
-        display.appendText("9");
-
-    }
-
-    @FXML
-    void one(ActionEvent event) {
-        display.appendText("1");    }
-
-    @FXML
-    void percent(ActionEvent event) {
-        double x = Double.parseDouble(display.getText());
-        x /= 100;
-
-        display.setText(String.valueOf(x));
-
-    }
-
-    @FXML
-    void dot(ActionEvent event) {
-        display.appendText(".");
-    }
-
-    @FXML
-    void plusMinus(ActionEvent event) {
-        if (display.getText().charAt(0) == '-')
-            display.deleteText(0,1);
-        else
-        display.insertText(0,"-");
-
-    }
-
-    @FXML
-    void seven(ActionEvent event) {
-        display.appendText("7");  }
-
-    @FXML
-    void six(ActionEvent event) {
-        display.appendText("6");   }
-
-    @FXML
-    void three(ActionEvent event) {
-        display.appendText("3");    }
-
-    @FXML
-    void two(ActionEvent event) {
-        display.appendText("2");  }
-
-    @FXML
-    void zero(ActionEvent event) {
-
-        display.appendText("0");
     }
 
 }
